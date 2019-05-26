@@ -120,7 +120,7 @@ using Price = uint64_t;
 
 struct SymbolStats {
 
-  using handler=SymbolStatsHandler;
+  //using handler=SymbolStatsHandler;
 
   Symbol symbol;
   Timestamp last_timestamp = 0;
