@@ -1,4 +1,4 @@
-# Install script for directory: /home/mxiong/cboe/solution
+# Install script for directory: /home/mxiong/projects/ade/archive/top_ten_symbols
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mxiong/cboe/solution/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/mxiong/projects/ade/archive/top_ten_symbols/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
