@@ -1,0 +1,5 @@
+/home/mxiong/interviews/symbol_stats/CMakeFiles/rebuild_cache.dir
+/home/mxiong/interviews/symbol_stats/CMakeFiles/test.dir
+/home/mxiong/interviews/symbol_stats/CMakeFiles/edit_cache.dir
+/home/mxiong/interviews/symbol_stats/CMakeFiles/main.dir
+/home/mxiong/interviews/symbol_stats/CMakeFiles/main_ut.dir

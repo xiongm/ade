@@ -1,0 +1,9 @@
+version: '3.4'
+services:
+  tweetsenti:
+    image: tweetsenti:latest
+    depends_on:
+      - "rabbitmq"
+
+  rabbitmq:
+    image: rabbitmq:latest

@@ -1,0 +1,5 @@
+-i https://pypi.org/simple
+tweepy==3.7.0
+textblob==0.15.3
+pika==1.0.0
+matplotlib==3.0.3
