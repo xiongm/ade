@@ -6,9 +6,5 @@ ACCESS_TOKEN_SECRET = '2jodYvxsmljMNafmiO9PSYxLXUEC4ZnQJNMSBDLWsGIBU'
 PLOT_STYLE="fivethirtyeight"
 PLOT_Y_LABEL="sentiment"
 PLOT_X_LABEL="time sequence"
-<<<<<<< Updated upstream
 CHART_WINDOW_SIZE=50
-=======
-CHART_WINDOW_SIZE=20
->>>>>>> Stashed changes
 
