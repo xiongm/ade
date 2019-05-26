@@ -1,0 +1,6 @@
+PaymentStatusId,PaymentStatusName
+10,Pending
+20,Authorized
+30,Paid
+35,Partially Refunded
+40,Refunded

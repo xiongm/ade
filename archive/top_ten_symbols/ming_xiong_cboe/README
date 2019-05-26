@@ -1,0 +1,115 @@
+Design Notes
+===============================
+
+The order of the codes really reflects the bottom up approach. We design the stats collection class (TopVolumeRanks) that takes care of top N
+symbols then we design the smallest unit SimpleOrder, followed by SimpleBookOrder(container for SimpleOrder), Book (container for per symbol SimpleBookOrder),
+utility parser functions and then PitchMessageHandler.
+
+Solution Notes
+===============================
+
+1. The solution is focused on logical seperation of concern, correctness and performance.
+but to keep it simple, it is not focused on physical code layout, so the code is in the
+same translation unit, saving me the time to have to worry about linking.
+
+2. the solution is not designed for thread safety for simplicity.
+
+
+3. the solution strives for self explained code, so each class definition is immediately followed by
+   unit test, which can help with code review (part of the reason it was all put in file)
+
+
+
+Build Notes
+===============================
+
+The solution builds with cmake
+
+>cmake .
+>make
+
+
+the unittest part of the solution bulds with gtest, thus requires gtest lib to be installed.
+this can be done either with apt install, or you can build directly from source
+
+
+https://github.com/google/googletest
+
+
+which is actually quite easy
+
+You will have to change the CMakeLists.txt to make this compile thou
+
+
+to run the program, do
+
+time ./main < ./pitch_sample_data
+
+
+*Note*
+If for any reason, you just don't want to deal with cmake or unittest, you can always do
+g++ -g -Wall -O3 --std=c++14 ./main.cpp -o ./main
+
+tested on ubuntu 18.04 with g++ 7.3.0
+
+
+Unit Test Results
+================================
+
+
+[==========] Running 5 tests from 5 test suites.
+[----------] Global test environment set-up.
+[----------] 1 test from TopVolumesRank
+[ RUN      ] TopVolumesRank.basic
+[       OK ] TopVolumesRank.basic (0 ms)
+[----------] 1 test from TopVolumesRank (0 ms total)
+
+[----------] 1 test from SimpleOrder
+[ RUN      ] SimpleOrder.basic
+[       OK ] SimpleOrder.basic (1 ms)
+[----------] 1 test from SimpleOrder (1 ms total)
+
+[----------] 1 test from SimpleOrderBook
+[ RUN      ] SimpleOrderBook.basic
+[       OK ] SimpleOrderBook.basic (0 ms)
+[----------] 1 test from SimpleOrderBook (0 ms total)
+
+[----------] 1 test from Book
+[ RUN      ] Book.basic
+[       OK ] Book.basic (0 ms)
+[----------] 1 test from Book (0 ms total)
+
+[----------] 1 test from PitchMessageHandler
+[ RUN      ] PitchMessageHandler.basic
+[       OK ] PitchMessageHandler.basic (0 ms)
+[----------] 1 test from PitchMessageHandler (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 5 test suites ran. (1 ms total)
+[  PASSED  ] 5 tests.
+
+
+
+SOLUTION RESULTS
+======================================
+OIH        5000
+SPY        2000
+DRYS       1209
+ZVZZT       577
+AAPL        495
+PTR         400
+UYG         400
+FXP         320
+DIA         229
+BAC         210
+Real running time:14 ms
+
+real    0m0.024s
+user    0m0.017s
+sys     0m0.000s
+
+
+
+Note that real running time only excludes the final output step
+
+

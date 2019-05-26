@@ -1,0 +1,5 @@
+OrderStatusId,OrderStatusName
+10,Pending
+20,Processing
+30,Complete
+40,Cancelled

@@ -1,0 +1,43 @@
+PROBLEM
+===================================================================
+ - Inspect four CSV files attached to the task.
+ - Define a schema suitable for loading the files into a database. Keep in mind that the files contain just a data sample while the real data set may have millions or billions of rows.
+ - Provide a CREATE statement for each table in your schema. Explain the reasoning for the data types and constraints chosen for each column.
+ - Create and provide a Python script that loads the contents of the files into the schema.
+ - Provide a SELECT query you would execute to extract data in order to create a report which shows the aggregate order total by date provided the orders are completed, paid, and do not require shipping. In the output replace the OrderStatusId, PaymentStatusId and ShippingStatusId numerical ID values with their corresponding names.
+ - Create a Python script that executes the above report and writes it out into another CSV file. Include the script and the output file in your submission.
+
+
+PREREQUISITE
+===================================================================
+ - solution is based on postgresql, which requires postgresql/psql to be installed on your localhost
+ - psycopg2 is required for reading db
+
+
+RUNNING
+===================================================================
+>./build_orders.sh
+> psql -d orders -c "select count(*) from orders"
+ count
+-------
+   222
+(1 row)
+
+
+
+SOLUTION FOLDER STRUCTURE
+===================================================================
+
+ - orders
+      |_ build_orders.sh # driver script that runs everything required in the assignment
+      |_ schemas # postgresql scripts for table creation
+      |_ python # scripts
+      |     |_ load_orders.py # loads content of orders csv
+      |     |_ gen_reports.py # scripts that execute report query and dump to csv
+      |_ data # original data
+      |_ tmp # tmp files created during the loading, see build_orders.sh for details
+      |_ results.csv # results for the summary report
+
+
+
+

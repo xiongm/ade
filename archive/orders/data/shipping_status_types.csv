@@ -1,0 +1,5 @@
+ShippingStatusId,ShippingStatusName
+10,Shipping not required
+20,Not yet shipped
+30,Shipped
+40,Delivered
