@@ -414,7 +414,6 @@ TEST(MessageHandler, basic)
   EXPECT_EQ(500, book.get_size('S', 1));
 
 
-
   book.reset();
 
   // problem statement example 2

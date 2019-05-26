@@ -1,1 +1,0 @@
-/usr/bin/c++   -O3  -rdynamic CMakeFiles/main_ut.dir/main.cpp.o  -o main_ut /home/mxiong/googletest/lib/libgtest.a -lpthread 

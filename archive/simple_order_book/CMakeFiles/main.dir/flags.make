@@ -6,5 +6,5 @@ CXX_FLAGS =  -O3
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mxiong/googletest/googletest/include 
+CXX_INCLUDES = 
 

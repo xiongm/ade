@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.9)
-project (cboe)
+project (simple_order_book)
 
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
@@ -12,5 +12,5 @@ target_link_libraries(main_ut ${GTEST_LIBRARIES} pthread)
 set_target_properties(main_ut PROPERTIES COMPILE_FLAGS "-D__UNITTEST__")
 
 enable_testing()
-add_test(NAME mytest COMMAND main_ut)
+add_test(NAME main_ut COMMAND main_ut)
 
