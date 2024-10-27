@@ -31,8 +31,8 @@ std::ostream & operator<<(ostream & os, const Packed msg)
 
 int main(int argc, char *argv[])
 {
-  cout << sizeof(Unpacked) << endl; // 12, alligned on 4 byte integer 
-  cout << sizeof(Packed) << endl; // 6
+  cout << "Size of unpacked:" <<  sizeof(Unpacked) << endl; // 12, alligned on 4 byte integer 
+  cout << "Size of packed:" << sizeof(Packed) << endl; // 6
 
   Unpacked test {'a', 10, 'b'};
   Packed test_packed {'a', 10, 'b'};
